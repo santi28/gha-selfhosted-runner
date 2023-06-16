@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  runner:
+    image: tcardonne/github-runner:latest
+    environment:
+      RUNNER_NAME: "SDNCorp Runner"
+      RUNNER_REPOSITORY_URL: "https://github.com/santi28/composes"
+      RUNNER_LABELS: "sdn-label1"
+      RUNNER_TOKEN: "RUNNER_TOKEN"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
